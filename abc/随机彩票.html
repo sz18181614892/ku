@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.ac{border: #FF0000 1px solid; width: 50px;height: 50px;border-radius: 25px;float: left;background-color: #FF0000;margin-left: 10px;line-height: 50px;text-align: center;}
+			.ab{border: blue 1px solid; width: 50px;height: 50px;border-radius: 25px;float: left;background-color: #0000FF;margin-left: 10px;line-height: 50px;text-align: center;}
+			#btn{margin-left: 15px; width: 100px;height: 50px;font-size: 18px;background-color: #FF0000;}
+		</style>
+	</head>
+	<body>
+		<button id="btn" type="button">随机彩票</button>
+		<div class="ac"></div>
+		<div class="ac"></div>
+		<div class="ac"></div>
+		<div class="ac"></div>
+		<div class="ac"></div>
+		<div class="ac"></div>
+		<div class="ab"></div>
+		<script>
+			var num = document.getElementsByTagName("div");
+			var btn = document.getElementById("btn")
+			btn.onclick=function(){
+				for(var i = 0; i<num.length-1;i++){
+					num[i].innerHTML = Math.round(Math.random()*(33-1)+(1))
+					}
+				num[6].innerHTML = Math.round(Math.random()*(16-1)+(1))
+			}
+		</script>
+	</body>
+</html>
